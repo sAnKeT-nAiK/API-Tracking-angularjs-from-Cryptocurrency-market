@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/angular.js"></script>
+</head>
+
+<body ng-app="myServiceApp">
+    <div ng-controller="myServiceCtrl">
+
+
+
+        <div class="jumbotron center text-center">
+    <h2> Crypto Chart BitBns</h2>
+      </div>
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-4">
+         <table class="table table-hover">
+    <thead>
+      <tr>
+      	<th>Coin</th>
+        <th>Buy</th>
+        <th>Sell</th>
+        <th>Last Price</th>
+      </tr>
+    </thead>
+    <tbody  ng-repeat='i in details'>
+      <tr ng-repeat='(a,val) in i'>
+      	<td >{{a}}</td>
+        <td >{{val.sellPrice}}</td>
+        <td >{{val.buyPrice}}</td>
+        <td  >{{val.lastTradePrice}}</td>
+      </tr>
+
+      <tr>
+      </tr>
+        
+    </tbody>
+  </table>
+</div>
+
+<div class="col-md-8" id="chartContainer" style="height: 370px; width: 80%";>
+
+</div>
+
+
+</div>
+	</div>
+    </div>
+</body>
+</html>
+
+ 
